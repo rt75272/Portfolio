@@ -1,0 +1,133 @@
+html, 
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #000;
+ 	background-repeat: no-repeat;
+ 	font-family: 'Raleway Dots', cursive;
+}
+#wrapper {
+	min-height: 100%;
+	position: relative;
+}
+nav {
+	padding-top: 10px;
+	list-style-type: none;
+	text-decoration: none;
+	height: 30px;
+}
+li #cmon {
+	margin-left: 5px;
+	color: cyan;
+	opacity: 0.5;
+	font-weight: 600;
+	border: none;
+	text-decoration: none;
+	font-size: 1.1em;
+}
+li #cmon:hover {
+	opacity: 1;
+	text-decoration: none;
+}
+.calculator {
+	width: 280px;
+	height: 250px;
+	margin: 0 auto;
+	text-align: center;
+	background: transparent;
+	border-radius: 2px;
+}
+.shift {
+	margin-left: -20px;
+}
+::-webkit-input-placeholder {
+   color: cyan;
+   opacity: .75;
+}
+#display {
+	width: 220px;
+	margin: 10px 0 5px 0;
+	height: 80px;
+	text-align: right;
+	background: transparent;
+	color: cyan;
+	border: none;
+	border-radius: 2px;
+	font-size: 60px;
+}
+button {
+	background: transparent;
+	width: 40px;
+	height: 40px;
+	/* margin: 10px 10px 20px 10px; */
+	border: none;
+	color: cyan;
+	text-decoration: none;
+	outline: none;
+	font-size: 50px;
+	opacity: .75;
+}
+button:active {
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+	opacity: 1;
+}
+.test {
+	width: 55px;
+}
+#ac {
+	width: 70px;
+}
+#divide {
+	width: 65px;
+}
+.foo {
+	text-decoration: none;
+	outline: none;
+	opacity: 1;
+}
+.bottom-fix {
+	margin-left: -25px;
+}
+#footer {
+	width: 100%;
+	bottom: 0;
+	height: 40px;
+	position: absolute;
+	font-size: 10px;
+}
+#foot-cont {
+	float: right;
+}
+@media screen and (max-width: 380px) {
+	nav {
+		padding-top: 1px;
+		margin-bottom: 5px;
+		list-style-type: none;
+		text-decoration: none;
+		height: 10px;
+	}
+	button: {
+		margin: 10px 10px 20px 10px;
+	}
+	button:hover {
+		cursor: pointer;
+		text-decoration: none;
+		outline: none;
+		opacity: 1;
+	}
+	li #cmon {
+		margin-left: 1px;
+		color: #f8f8f8;
+		opacity: .5;
+		border: none;
+		text-decoration: none;
+		font-size: 1em;
+	}
+	li #cmon:hover {
+		opacity: 1;
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' />
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Hairline" />
+	<link rel='stylesheet' href='weather.css' />
+</head>
+
+<body onload='autoDetect()'>
+
+<div id='wrapper'>
+
+	<nav>
+		<li><a id='cmon' href='../index.html'>home</a></li>
+	</nav>
+	
+	<div class='container'>
+    	<div class='switch'>
+			<h1 id='pic'></h1>
+			<h1 class='item' id='city'></h1>
+      		<h1 class="toggle item" id="fahrenheit"></h1>
+      		<h1 class="toggle item" style="display: none" id="celsius"></h1>
+			<h2 class='item' id='general'></h2>
+   	 	</div>
+		<div class='engine'>
+			<input id='citi' placeholder='Search location by name or zipcode'></input>
+			<button onclick='search()'>Search</button>
+		</div>
+	</div>
+ 
+	<div id='footer'></div>
+
+</div>
+
+<script src='weather.js'></script>
+</body>
+
+</html>

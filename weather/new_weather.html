@@ -1,0 +1,84 @@
+<head>
+    <meta charset='UTF-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <p>
+        <a href="../index.html">Home</a>
+    </p>
+</head>
+<body>
+    <div id='nav'>
+        <input id='citi' placeholder='Search city'></input>
+        <button onclick='search_location()' id="btn">Search</button>
+        <p id="test_area"> </p>
+        <p id="weather_data"> </p>
+<script>
+
+    function search_location() {
+        document.getElementById("weather_data").innerHTML = "Please hold...";
+        var query = document.getElementById("citi").value;
+
+        if(query.length > 0) {
+            document.getElementById("weather_data").innerHTML = "Loading...";
+            var url = 'http://api.weatherapi.com/v1/current.json?'
+                + 'key=c8a33240f4374aefa68211026222601&q='
+                + query
+                + '&aqi=no';
+            var xhReq = new XMLHttpRequest();
+            xhReq.open("GET", url, false);
+            xhReq.send(null);
+            var jsonObject = JSON.parse(xhReq.responseText);
+            var data = JSON.stringify(jsonObject);
+
+            document.getElementById("weather_data").innerHTML = "<br>"
+                + jsonObject.location.name
+                + ", " + jsonObject.location.region
+                + "<br/>"
+                + jsonObject.current.condition.text + " "
+                + jsonObject.current.temp_f
+                + "&#8457; <br/>"
+                + "<img src='" + jsonObject.current.condition.icon + "'>";
+        }
+        else {
+            document.getElementById("weather_data").innerHTML = "Loading default location(Tucson, AZ)...";
+            var url = 'http://api.weatherapi.com/v1/current.json?'
+                + 'key=c8a33240f4374aefa68211026222601&q=Tucson&aqi=no';
+            var xhReq = new XMLHttpRequest();
+            xhReq.open("GET", url, false);
+            xhReq.send(null);
+            var jsonObject = JSON.parse(xhReq.responseText);
+            var data = JSON.stringify(jsonObject);
+
+            document.getElementById("weather_data").innerHTML = "<br>"
+                + jsonObject.location.name
+                + ", " + jsonObject.location.region
+                + "<br/>"
+                + jsonObject.current.condition.text + " "
+                + jsonObject.current.temp_f
+                + "&#8457; <br/>"
+                + "<img src='" + jsonObject.current.condition.icon + "'>";
+        }
+    }
+
+    var shift = false;
+
+    window.addEventListener('keyup', function(event){
+            var x = event.keyCode;
+                        if(x == 16) {
+                            shift = true;
+                            setTimeout(function() {
+                                shift = false;
+                            }, 1000);
+                        }
+                    if (x == 13 && shift == false) {
+                            $(window).ready(function(){
+                                        $('#btn').addClass('compress');
+                                    setTimeout(function() {
+                                        $('#btn').removeClass('compress');
+                                        $('#btn').click();
+                        }, 100);
+            }); 	}
+    });
+
+</script>
+</body>

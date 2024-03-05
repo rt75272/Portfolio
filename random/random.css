@@ -1,0 +1,27 @@
+html,
+body {
+	display: block;
+	height: 100%;
+	margin: 0;
+	opacity: 0.75;
+	padding: 0;
+	width: 100%;
+}
+a {
+	color: #000;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 1.1em;
+	letter-spacing: 1px;
+	opacity: 0.6;
+	padding: 5px;
+	position: absolute;
+	text-decoration: none;
+	z-index: 1;
+}
+a:hover {
+	opacity: 1;
+}
+canvas {
+	position: absolute;
+	z-index: -9999;
+}

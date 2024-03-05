@@ -1,0 +1,20 @@
+html {
+	text-align: center;
+	background: #000;
+}
+#canvas {
+	background: #000;
+}
+#nav {  
+  background: #000;  
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  opacity: 0.5;
+  color: cyan;
+}
+a:hover {
+  color: cyan;
+  cursor: pointer;
+  opacity: 1;

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' />
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet">
+  	<link rel='stylesheet' href='calculator.css' />
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+	<div class='wrapper'>
+
+		<nav>
+			<li><a id='cmon' href='../index.html'>Home</a></li>
+		</nav>
+
+		<div class='calculator'>
+			<div class='shift'>
+				<input placeholder="0"  type='text' id='display' disabled></input>
+				<br>
+				
+				<button class='test' id='ac'>ac</button>
+				<button  class='test' value='/' id='divide'>&divide;</button>
+				<button  class='test' value='*' id='multiply'>x</button>
+				<br>
+				<button id='seven' value='7'>7</button>
+				<button id='eight' value='8'>8</button>
+				<button id='nine' value='9'>9</button>
+				<button id='subtract' value='-'>-</button>
+				<br>
+				<button id='four' value='4'>4</button>
+				<button id='five' value='5'>5</button>
+				<button id='six' value='6'>6</button>
+				<button id='plus' value='+'>+</button>
+				<br>
+				<button id='one' value='1'>1</button>
+				<button id='two' value='2'>2</button>
+				<button id='three' value='3'>3</button>
+				<button value='.' id='decimal'>.</button>
+				<br>
+				<div class="bottom-fix">
+				<button class='test' id='zero' value='0'>0</button>
+				<button class='test' id='equal'>=</button>
+				<button class='test' id='back'><<</button>
+				</div>
+			</div>
+		</div>
+
+		<div id='footer'></div>
+
+	</div>
+<script src='calculator.js'></script>
+</body>
+
+</html>

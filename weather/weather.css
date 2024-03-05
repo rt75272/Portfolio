@@ -1,0 +1,96 @@
+html, 
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(lightblue, white);
+	background-repeat: no-repeat;
+}
+body {
+	font-family: 'Bungee Hairline', cursive, 'Palatino Linotype', 'sans-serif';
+	color: #555555;
+}
+#wrapper {
+	min-height: 100%;
+	position: relative;
+}
+nav {
+	list-style-type: none;
+	border: none;
+	text-decoration: none;
+}
+li #cmon {
+	margin: 10px 0 0 20px;
+	color: #555555;
+	font-weight: bold;
+	opacity: .5;
+	border: none;
+	text-decoration: none;
+}
+li #cmon:hover {
+	font-weight: bold;
+	opacity: 1;
+	color: #555555;
+	text-decoration: none;
+}
+.switch:hover {
+	cursor: pointer;
+}
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.switch {
+	max-width: 400px;
+	margin: 0 auto;
+	line-height: 2.5em;
+}
+.item {
+	padding-bottom: 20px;
+	font-size: 44px;
+}
+#general {
+	font-size: 35px;
+}
+.engine {
+	padding: 0 50px 0 50px;
+	opacity: .5;
+}
+.engine:hover {
+	opacity: 1;
+}
+.engine input {
+	width: 400px;
+	height: 30px;
+	outline: none;
+}
+.engine input:focus {
+	outline: .5px solid;
+	outline-color: blue;
+}
+button {
+	height: 36px;
+	color: #555555;
+}
+button:hover {
+	cursor: pointer;
+}
+#pic {
+	float: right;
+}
+#footer {
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+	font-size: 10px;
+	text-indent: 15px;
+}
+#foot-cont {
+	float: right;
+	font-weight: bold;
+	opacity: 0.4;
+}
+#foot-cont:hover {
+	opacity: 1;
+}

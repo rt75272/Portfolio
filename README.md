@@ -1,2 +1,2 @@
-# Portfolio
-Basic portfolio website
+# ryanthompsoncs
+Spring 2017
